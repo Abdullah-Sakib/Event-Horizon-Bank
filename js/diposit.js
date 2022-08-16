@@ -7,6 +7,11 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
   // set the input feild empty
   const empty = newDeposit.value = '';
 
+  if(isNaN(newDepositValue)){
+    alert('Plese provide a valid number');
+    return;
+  }
+
   // get the previus deposit value 
   const previusDeposit = document.getElementById('previus-deposit');
   const previusDepositString = previusDeposit.innerText;
@@ -16,5 +21,13 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
   const calculate = newDepositValue + previusDepositValue;
   const setvalue = previusDeposit.innerText = calculate;
 
-  console.log( previusDepositValue);
+  // get the total balance value
+  const previusTotalBalance = document.getElementById('previus-balance');
+  const previusBalanceString = previusTotalBalance.innerText;
+  const previusBalanceValue = parseFloat(previusBalanceString);
+
+  // set total balance value after diposit
+  const calculateTotalBalance = previusBalanceValue + newDepositValue;
+  const totalBalance = previusTotalBalance.innerText = calculateTotalBalance;
+
 })
