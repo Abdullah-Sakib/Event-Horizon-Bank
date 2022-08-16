@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Horizon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="text-6xl text-center mt-10 font-medium">The <span class="text-yellow-400">Event Horizon</span> Bank</h1>
+  </header>
+  <main>
+    <section>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-9/12 mx-auto mt-10">
+        <div class="bg-blue-400 rounded-lg px-5 py-8">
+          <h4 class="text-white font-semibold text-4xl">Diposit</h4>
+          <h2 class="text-white font-semibold text-6xl">$<span id="previus-deposit">00</span></h2>
+        </div>
+        <div class="bg-yellow-400 rounded-lg px-5 py-8">
+          <h4 class="text-white font-semibold text-4xl">Withdraw</h4>
+          <h2 class="text-white font-semibold text-6xl">$<span>00</span></h2>
+        </div>
+        <div class="bg-blue-400 rounded-lg px-5 py-8">
+          <h4 class="text-white font-semibold text-4xl">Balance</h4>
+          <h2 class="text-white font-semibold text-6xl">$<span>1240</span></h2>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-9/12 mx-auto mt-10">
+        <div class="bg-yellow-400 px-5 sm:px-10 py-12 rounded-lg">
+          <h2 class="text-5xl text-white font-semibold">Deposit</h2>
+          <input type="number" name="" id="deposit-input" class="block px-4 py-2 rounded-lg mt-6 w-full sm:w-9/12"
+            placeholder="$ Enter your amount">
+          <button
+            class="bg-white hover:bg-blue-400 text-xl font-medium px-6 py-2 mt-5 rounded-lg  hover:ease-in duration-150 hover:text-white" id="deposit-btn">Deposit</button>
+        </div>
+        <div class="bg-blue-400 px-5 sm:px-10 md:px-5 lg:px-10 py-12 rounded-lg">
+          <h2 class="text-5xl text-white font-semibold">Withdraw</h2>
+          <input type="number" name="" id="deposit-input" class="block px-4 py-2 rounded-lg mt-6  w-full sm:w-9/12"
+            placeholder="$ Enter your amount">
+          <button
+            class="bg-white hover:bg-yellow-400 text-xl font-medium px-6 py-2 mt-5 rounded-lg  hover:ease-in duration-150 hover:text-white">Withdraw</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/diposit.js"></script>
+</body>
+
+</html>
